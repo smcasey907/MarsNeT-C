@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Service } from '../service';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MessagesComponent } from './messages/messages.component'
+import * as FileSaver from 'file-saver';
 
 @Component({
   selector: 'app-dashboard',
@@ -62,5 +63,8 @@ export class DashboardComponent implements OnInit {
 
   changeActiveMessage($event) {
     this.userData = $event;
+
+    let blob = new Blob([this.userData], {type: "json;charset=utf-8"});
+    FileSaver.saveAs(blob, "test.txt");
   }
 }

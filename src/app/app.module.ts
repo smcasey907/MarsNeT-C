@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import * as FileSaver from 'file-saver';
 
 // Custom components
 import { DashboardComponent } from './dashboard/dashboard.component';
